@@ -77,7 +77,6 @@ function Paciente (nomb,apellido,edad,genero,ciudad,pais)
 	};
 }
 
-
 describe('Ejercicio 1', function(){
   it('Suma del numero_inicial + el numero_final', function(){
     assert.equal(55, ejercicio1.Suma_numeros(1,10));
@@ -85,12 +84,13 @@ describe('Ejercicio 1', function(){
 });
 
 describe('Ejercicio 2', function(){
-  var ejercicio2= new Desarrolladora("Evelyn",22,"web developer","mujer");
-
+  var ejercicio2= new Desarrolladora ("Evelyn",22,"web developer","mujer");
   it('Descubre si eres una Super_coder', function(){
     assert.equal("You're awesome", ejercicio2.mensaje());
   });
+
   it('Descubre si eres una Super_coder', function(){
+    var ejercicio2= new Desarrolladora("Evelyn",12,"estudiante","mujer");
     assert.equal("Upsiii", ejercicio2.mensaje());
   });
 });
@@ -102,8 +102,10 @@ describe('Ejercicio 3', function(){
 });
 
 describe("Ejercicio 4",function(){
-		it("Debe imprimir datos del paciente",function(){
-			var persona = new Paciente ("Evelyn","Guevara",19,"Femenino","Ica","Perú");
-			assert.equal("Nombre: Evelyn Guevara\nEdad: 22\nPaís: Perú",persona.ficha_datos());
+		it("Debe imprimir datos del paciente",function()
+
+    {
+			var persona = new Paciente ("Evelyn","Guevara",12,"Femenino","Ica","Perú");
+			assert.equal("Nombre: Evelyn Guevara\nEdad: 12\nPaís: Perú",persona.ficha_datos());
 		});
 	});
